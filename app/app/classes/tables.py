@@ -23,6 +23,12 @@ class Tables:
             `description` TEXT NULL,
             `status_id` INT,
             `user_id` INT,
-            FOREIGN KEY(status_id) REFERENCES status(id),
+            FOREIGN KEY(status_id) REFERENCES status(id)
+                ON DELETE CASCADE
+                ON UPDATE CASCADE,
             FOREIGN KEY(user_id) REFERENCES users(id)
+                ON DELETE CASCADE
+                ON UPDATE CASCADE
             )""")
+        
+        self.cur.execute("""CREATE INDEX index_tasks ON tasks (status_id, user_id)""")
