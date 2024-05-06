@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Timur Logachov <ifk.webdev@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+main = "app.main:main"
+init = "app.main:init"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.test.dependencies]
+faker = "^25.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
