@@ -1,5 +1,5 @@
 class Tables:
-    def __init__(self, cur) -> None:
+    def __init__(self, cur):
         self.cur = cur
 
     def create(self):

@@ -1,8 +1,7 @@
 from faker import Faker
 
 class Seed:
-
-    def __init__(self, cur) -> None:
+    def __init__(self, cur):
         self.fake = Faker()
         self.cur = cur
 
